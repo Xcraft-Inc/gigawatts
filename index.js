@@ -50,7 +50,7 @@ function wrap (gen, opts) {
       args = args.slice(0, -1)
     }
     if (!opts.context) opts.context = this
-    return Watt(gen, args, opts, cb).run()
+    return new Watt(gen, args, opts, cb).run()
   }
 }
 
