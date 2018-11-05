@@ -1,7 +1,7 @@
 {
   "name": "gigawatts",
-  "version": "3.3.0",
-  "description": "Powerful generator control flow",
+  "version": "4.0.0",
+  "description": "Powerful generator control flow (fork of watt)",
   "main": "index.js",
   "scripts": {
     "test": "standard && tap test.js --cov",
