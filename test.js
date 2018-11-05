@@ -411,6 +411,12 @@ test('wrapAll', (t) => {
         return this.n
       },
       b: function * () {},
+      get c () {
+        throw new Error('the getter must not be called')
+      },
+      set c (v) {
+        throw new Error('the setter must not be called')
+      },
       n: 10
     }
     watt.wrapAll(obj)

@@ -60,7 +60,9 @@ function wrapAll (object, opts) {
   opts = Object.assign({ context: object }, opts)
 
   function wrapAndBind (name) {
-    if (!object[name] || !object[name].constructor ||
+    var desc = Object.getOwnPropertyDescriptor(object, name)
+    if (!(desc && !desc['get']) ||
+      !object[name] || !object[name].constructor ||
       object[name].constructor.name !== 'GeneratorFunction') return
     object[name] = wrap(object[name], opts)
   }
