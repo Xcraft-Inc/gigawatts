@@ -1,6 +1,6 @@
 {
   "name": "gigawatts",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "Powerful generator control flow (fork of watt)",
   "main": "index.js",
   "scripts": {
