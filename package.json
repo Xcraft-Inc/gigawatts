@@ -1,6 +1,6 @@
 {
   "name": "gigawatts",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Powerful generator control flow (fork of watt)",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,9 @@
     "test-lcov": "mkdir -p coverage && tap test/*.js -Rsilent --coverage-report=text-lcov > coverage/lcov.info"
   },
   "author": "Matt Bell <mappum@gmail.com>",
-  "contributors": ["Mathieu Schroeter <mathieu@schroetersa.ch>"],
+  "contributors": [
+    "Mathieu Schroeter <mathieu@schroetersa.ch>"
+  ],
   "license": "MIT",
   "dependencies": {
     "setimmediate": "^1.0.4"
