@@ -1,3 +1,7 @@
+# gigawatts fork of watt
+
+![gigawatt](./gigawatts.gif)
+
 # watt
 
 [![npm version](https://img.shields.io/npm/v/watt.svg)](https://www.npmjs.com/package/watt)
