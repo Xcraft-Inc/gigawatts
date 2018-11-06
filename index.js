@@ -59,8 +59,8 @@ function wrapAll (object, opts) {
   if (typeof opts === 'string') opts = {}
   opts = Object.assign({ context: object }, opts)
 
-  function wrapAndBind (name) {
-    var desc = Object.getOwnPropertyDescriptor(object, name)
+  function wrapAndBind (name, proto) {
+    var desc = Object.getOwnPropertyDescriptor(proto, name)
     if (desc && desc['get']) return
     if (
       !object[name] || !object[name].constructor ||
@@ -70,13 +70,13 @@ function wrapAll (object, opts) {
 
   var name
   if (names.length > 0) {
-    for (name of names) wrapAndBind(name)
+    for (name of names) wrapAndBind(name, object)
   } else {
     if (object.constructor && object.constructor.prototype) {
       var classProperties = Object.getOwnPropertyNames(object.constructor.prototype)
-      for (name of classProperties) wrapAndBind(name)
+      for (name of classProperties) wrapAndBind(name, object.constructor.prototype)
     }
-    for (name in object) wrapAndBind(name)
+    for (name in object) wrapAndBind(name, object)
   }
 }
 
